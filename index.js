@@ -11,6 +11,10 @@ const Message=require('./Routes/Messages');
 app.use(cors());
 app.use(express.json());
 
+app.get('/',(req,res)=>{
+    res.json({'server':"working"})
+})
+
 app.use('/login',Login);
 app.use('/dashbord',Dashbord)
 app.use('/post',Post);
